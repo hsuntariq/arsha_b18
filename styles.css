@@ -2,6 +2,17 @@
   --blue: #37517e;
 }
 
+nav {
+  position: fixed !important;
+  top: 0 !important;
+  background-color: #37517e !important;
+  width: 100%;
+  left: 0 !important;
+  margin: auto !important;
+  z-index: 999;
+  display: flex !important;
+  justify-content: center !important;
+}
 .front {
   background-color: var(--blue);
 }
@@ -32,7 +43,8 @@
 }
 
 .gray {
-  width: 100%;
+  width: 200px;
+
   height: 2px;
   border-radius: 30px;
   background-color: lightgray;
@@ -58,4 +70,61 @@
 
 .bg-blue {
   background-color: var(--blue) !important;
+}
+/* url("https://bootstrapmade.com/content/demo/Arsha/assets/img/cta-bg.jpg") */
+.img-bg {
+  background: linear-gradient(rgba(55, 81, 126, 0.3), rgba(55, 81, 126, 0.7)),
+    url("https://bootstrapmade.com/content/demo/Arsha/assets/img/cta-bg.jpg")
+      fixed;
+}
+
+.img-parent {
+  overflow: hidden;
+}
+
+.img-content {
+  bottom: 0;
+  transform: translateY(90px);
+  transition: all 0.3s ease-out;
+}
+
+.img-parent:hover .img-content {
+  transform: translateY(0);
+}
+
+.my-card {
+  transition: all 0.4s;
+}
+
+.my-card h5 {
+  transition: all 0.3s;
+}
+
+.my-card:hover {
+  transform: translateY(-10px);
+}
+
+.my-card:hover h5 {
+  color: var(--bs-info) !important;
+}
+
+.carousel-item img {
+  height: 50vh !important;
+  object-fit: cover;
+}
+
+.clip-circle {
+  clip-path: circle() !important;
+}
+
+@media (max-width: 767px) {
+  .team-image {
+    width: 40% !important;
+    margin: auto !important;
+    display: block !important;
+  }
+
+  .my-hr {
+    margin: auto !important;
+  }
 }
